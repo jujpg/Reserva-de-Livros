@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+    <link rel="stylesheet" href="css/estilo_admin.css" type="text/css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <nav class="barra_lateral">
+                <a href="admin_home.html"><img width="200px" src="../biblioteca.png"></a>
+                    <ul>
+                        <li><a class="setor" href="etq_ctrl.php">Controle de Estoque</a></li>
+                        <li><a class="setor" href="cad_bk.html">Cadastro de Livros</a></li>
+                        <li><a class="setor" href="reserv.php">Reservas</a></li>
+                    </ul>
+                </nav>
+            </td>
+            <td id="bah">
+                <header>
+                <h1 class="title">Cadastro de Livros</h1>
+                </header>
+                <table class="box_form">
+                    <form action="add_livro.php" method="post" id="cad">
+                        <tr>
+                            <td class="form"><label for="titulo">Título</label></td>
+                            <td class="form"><input type="text" id="titulo" required name="titulo"></td>
+                        </tr>
+                        <tr class="iputs">
+                            <td class="form"><label for="autor">Autor</label></td>
+                            <td class="form"><input type="text" id="autor" required name="autor"></td>                         
+                        </tr>
+                        <tr>
+                            <td class="form"><label for="editora">Editora</label></td>
+                            <td class="form"><input type="text" id="editora" required name="editora"></td>
+                        </tr>
+                        <tr>
+                            <td class="form"><label for="ano_publicacao">Ano de publicação</label></td>
+                            <td class="form"><input type="number" id="ano_publicacao" required name="ano_publicacao"></td>
+                        </tr>
+                        <tr>
+                            <td class="form"><label for="categoria">Categoria</label></td>
+                            <td class="form"> <select name="categoria" id="categoria">
+                                <option value="null"></option>
+                                <option value="Didático">Didático</option>
+                                <option value="Infantil">Infantil</option>
+                                <option value="Fantasia">Fantasia</option>
+                                <option value="Mistério">Mistério</option>
+                                <option value="Romance">Romance</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="form"><label for="sinopse">Sinopse</label></td>
+                            <td class="form"><textarea name="sinopse" sentences id="sinopse" oninput="autoResize(this)" ></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="form"><label for="capa">Capa do Livro</label></td>
+                            <td class="form"><input type="file" id="capa" required name="capa" value="Escolher uma imagem"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="form"><button type="submit" onclick="sendForm()">Cadastrar</button></td>
+                            <td class="form"><button type="reset" value="reset">Apagar tudo</button></td>
+                        </tr>
+                        
+                    </form>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function autoResize(textarea) {
+    textarea.style.height = "auto"; // Redefine a altura para 'auto' para evitar limitações de tamanho prévio
+    textarea.style.height = (textarea.scrollHeight) + "px"; // Define a altura com base no conteúdo rolável
+}
+
+// Chama a função ao carregar a página para ajustar a altura inicial da textarea
+window.addEventListener("load", function() {
+    autoResize(document.getElementById("sinopse"));
+});
+    </script>
+</body>
+</html>

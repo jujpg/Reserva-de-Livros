@@ -1,0 +1,15 @@
+1. Como faço para pegar livros emprestados a biblioteca?
+Basta solicitar sua carteirinha da biblioteca a um funcionário.
+
+2. Quem pode retirar livros da biblioteca?
+Alunos, professores e funcionarios da escola.
+
+3.Quantos livros posso retirar e por quanto tempo posso permanecer com o livro?
+Cada aulno pode retirar 01 livro pelo período de 07 dias.
+
+4. O que devo fazer se não conseguir ler o livro até a data de devolução?
+Venha até a biblioteca e renove o livro para mais 07 dias.
+
+5. O que acontece se eu perder um livro ou causar algum dano a ele? 
+O aluno terá que substituir o livro perdido ou danificado. 
+A biblioteca pedirá a reposição do mesmo título ou indicará outro para a substituição.
