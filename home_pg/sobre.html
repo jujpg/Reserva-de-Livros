@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/informacoes.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+<link rel="icon" href="../logo.png" type="image/icon type">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Biblioteca</title>
+    <style>
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+  background-color: rgba(40, 4, 199, 0.856);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.imagem1 {
+  float: left;
+  text-align: center;
+  color: rgba(40, 4, 199, 0.856);
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+.menu li {
+  display: flex;
+}
+
+.menu li a {
+  display: flex;
+  color: rgba(40, 4, 199, 0.856);
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 18px;
+  font-size: 18px;
+  height: 100%;
+  width: 200px;
+  margin-top: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu li:not(:nth-child(1)) a:hover {
+  background-color: rgba(40, 4, 199, 0.856);
+  color: white;
+}
+
+#search{
+  border-radius:20px 20px 20px 20px;
+  background-color:rgba(40, 4, 199, 0.856);
+  padding-left:10px;
+  font-style: arial;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:260px;
+  color: aliceblue;
+  margin: 30px;
+  justify-content: right;
+  align-items: right;
+  text-decoration: none;
+  right: 10px;
+}
+
+#grid {
+    display: grid;
+    margin-top: 20px;
+    grid-gap: 10px;
+    margin: 20px 30px ;
+    grid-template-areas:
+      "header header header"
+      "aside main main"
+      "footer footer footer";
+  }
+
+  .o-header {
+    grid-area: header;
+    font-size: 100px;
+    height: 100px;
+    display: inline;
+  }
+  .o-aside {
+    grid-area: aside;
+  }
+  
+  .o-main {
+    grid-area: main;
+  }
+  
+  .o-footer {
+    grid-area: footer;
+  }
+
+  .o-header, .o-aside, .o-main, .o-footer {
+    background: rgb(60,60,159);
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+  }
+
+footer {
+  background-color: rgba(40, 4, 199, 0.856);
+  opacity: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footerContainer{
+  width: 100%;
+  padding: 10px 10px 10px;
+}
+
+.footerNav{
+  margin: 10px 0;
+}
+
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a{
+  color: white;
+  margin:30px;
+  text-decoration:none;
+  font-size: 1.1em;
+  opacity: 1;
+  transition:0.5s;
+}
+
+.footerNav ul li a:hover{
+  opacity: 1; 
+  color: rgb(123, 131, 241);
+}
+
+.footerBottom{
+  background-color: rgba(40, 4, 199, 0.856);
+  opacity: 0.7;
+  padding: 10px;
+  text-align: center;
+}
+
+.footerBottom p{
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+}
+
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 700px){
+  .footerNav ul{
+    flex-direction: column;
+  }
+  .footerNav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
+::placeholder{
+  color: white;
+}
+</style>
+</head>
+<ul class="menu">
+    <li><a href=""><img src="../biblioteca.png" title="Home - Biblioteca Virtual" width="140px" alt="imagem1" class="imagem1"></a></li>
+  <li><a href="pagina_inicial.html">PÁGINA INICIAL</a></li>
+  <li><a href="sobre.html">BIBLIOTECA</a> </li>
+  <li><a href="quemsomos.html">QUEM SOMOS</a></li>
+          <div id="divBusca">
+            <form action="busca.php">
+              <input type="text" name="tit_livro" id="search" placeholder="Pesquisar..." required />
+          </form>
+          </div>
+  </ul>
+<body>
+    <div id="grid">
+   
+
+    <aside class="o-aside" >
+        <h1>Sobre a Biblioteca</h1>
+        <p>
+          Na biblioteca da Fundação Instituto Tecnológico de Osasco (FITO), você pode encontrar uma varieade de mais de 15 mil livros,
+       entre livros de ficção, livros Ciêntificos, Contos, entre outros.
+  </p>
+  <p>
+          Nossa interface é fácil de usar, permite filtragem por gênero, livro, tópico, autor ou palavra-chave.
+  </p>
+  <p>
+          A biblioteca oferece acessibilidade na leitura, incluindo pessoas com necessidades especiais. Na forma digital, fonte e cores confortáveis aos olhos.
+  </p>
+    </aside>
+
+    
+    <section class="o-footer"><div1>Dúvidas sobre o empréstimo de livros!</div1>
+        <div>Como faço para pegar livros emprestados na biblioteca? -------- Basta solicitar sua carteirinha da biblioteca a um funcionário.</div>
+        <div>Quem pode retirar livros na biblioteca? -------- Alunos, professores e funcionários da escola.</div>
+        <div>Quantos livros cada aluno pode retirar e quanto tempo pode permanecer com o livro? -------- Cada aluno pode retirar 01 livro pelo período de 07 dias.</div>
+        <div>O que devo fazer se não conseguir ler o livro até a data de devolução? -------- Venha até a biblioteca e renove o livro por mais 07 dias.</div>
+        <aside class="ajudabuttom">
+            <a href="#" style="color: rgb(153, 197, 235);">Ajuda</a>
+        </aside>    
+    </div>
+    <br>
+    <br>
+</section>
+    <footer>
+        <div class="footerContainer">
+          <div class="footerNav">
+            <ul>
+              <li><a href="pagina_inicial.html">Página Inicial</a></li>
+              <li><a href="sobre.html">Sobre a Biblioteca</a></li>
+              <li><a href="quemsomos.html">Quem Somos</a></li>
+              <li><a href="https://www.instagram.com/reservadelivrosdafito/">Siga-nos no Instagram</a></li>
+            </ul>
+            </div>
+            </div>
+          </div>
+          <div class="footerBottom">
+            <p>Contato: 3652-3074 / Endereço: Rua Camélia, 26</p>
+            <br/>
+            <p>Copyright &copy;2023; Designed by <span class="designer">Equipe Gama</span></p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
